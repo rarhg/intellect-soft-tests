@@ -1,0 +1,8 @@
+,gradle/
+.idea/
+build/
+out/
+allure-results/
+allure-report/
+*.log
+*.iml
