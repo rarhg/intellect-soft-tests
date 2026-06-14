@@ -108,12 +108,4 @@ public class IntellectSoftTest extends BaseTest {
                 .pageShouldBeLoaded()
                 .companyDescriptionShouldContain("более 20 лет");
     }
-
-//    @Test
-//    @Description("Проверка, что ссылки в футере не битые")
-//    void footerLinksAreNotBrokenTest() {
-//        new MainPage()
-//                .openPage()
-//                .checkFooterLinks();
-//    }
 }

@@ -76,14 +76,4 @@ public class MainPage {
         korobkaOnlineLink.click();
         return new ProjectPage();
     }
-
-    @Step("Проверить, что ссылки в футере не битые")
-    public MainPage checkFooterLinks() {
-        ElementsCollection footerLinks = $$("footer a");
-        for (SelenideElement link : footerLinks) {
-            link.scrollTo().click();
-            back();
-        }
-        return this;
-    }
 }
