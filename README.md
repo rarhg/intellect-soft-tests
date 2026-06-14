@@ -86,7 +86,6 @@
 
 <p align="center">
 <img title="Allure TestOps Dashboard" src="media/screens/testops.png">
-<img src="media/screens/testops2.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/telegram.svg"> Уведомления в Telegram
@@ -96,11 +95,11 @@
 ```
 ✅ IntellectSoft Tests
 📊 Статистика:
-🟢 Пройдено: 8
+🟢 Пройдено: 10
 🔴 Упало: 0
 🟡 Пропущено: 0
-📋 Всего: 8
-⏱ Время: 78 сек
+📋 Всего: 10
+⏱ Время: 128 сек
 🔗 Отчёт
 ```
 
