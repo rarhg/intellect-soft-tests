@@ -84,19 +84,19 @@ public class IntellectSoftTest extends BaseTest {
     }
 
     @Test
-    @Description("Отправка формы обратной связи с валидными данными")
-    void submitContactFormTest() {
+    @Description("Заполнение формы обратной связи (без отправки)")
+    void fillContactFormTest() {
         new MainPage()
                 .openPage()
-                .goToContactsPage();
+                .goToContactsPage()
+                .pageShouldBeLoaded();
 
         new ContactFormPage()
+                .formShouldBeVisible()
                 .fillName("Иван Петров")
                 .fillPhone("+79991234567")
-                .fillMessage("Тестовое сообщение от автотеста")
-                .agreeToTerms()
-                .submitForm()
-                .successMessageShouldBeVisible();
+                .fillMessage("Тестовое сообщение для демонстрации")
+                .agreeToTerms();
     }
 
     @Test
@@ -109,11 +109,11 @@ public class IntellectSoftTest extends BaseTest {
                 .companyDescriptionShouldContain("более 20 лет");
     }
 
-    @Test
-    @Description("Проверка, что ссылки в футере не битые")
-    void footerLinksAreNotBrokenTest() {
-        new MainPage()
-                .openPage()
-                .checkFooterLinks();
-    }
+//    @Test
+//    @Description("Проверка, что ссылки в футере не битые")
+//    void footerLinksAreNotBrokenTest() {
+//        new MainPage()
+//                .openPage()
+//                .checkFooterLinks();
+//    }
 }

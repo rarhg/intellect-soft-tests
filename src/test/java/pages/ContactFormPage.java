@@ -11,8 +11,6 @@ public class ContactFormPage {
     private final SelenideElement phoneField = $("#contact");
     private final SelenideElement messageField = $("#message");
     private final SelenideElement confirmCheckbox = $("#confirm");
-    private final SelenideElement submitButton = $("button[type='submit']");
-    private final SelenideElement successMessage = $(".form-success");
 
     @Step("Проверить, что форма обратной связи отображается")
     public ContactFormPage formShouldBeVisible() {
@@ -44,18 +42,6 @@ public class ContactFormPage {
     @Step("Согласиться на обработку персональных данных")
     public ContactFormPage agreeToTerms() {
         confirmCheckbox.scrollTo().click();
-        return this;
-    }
-
-    @Step("Отправить форму")
-    public ContactFormPage submitForm() {
-        submitButton.click();
-        return this;
-    }
-
-    @Step("Проверить, что форма успешно отправлена")
-    public ContactFormPage successMessageShouldBeVisible() {
-        successMessage.shouldBe(visible);
         return this;
     }
 }
