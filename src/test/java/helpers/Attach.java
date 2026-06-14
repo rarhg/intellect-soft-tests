@@ -45,10 +45,17 @@ public class Attach {
 
     public static String getVideoUrl() {
         String remoteHost = Configuration.remote;
+
+        if (remoteHost == null || remoteHost.isEmpty()) {
+            return "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+        }
+
         remoteHost = remoteHost.replaceFirst("https://[^@]+@", "https://");
+
         if (remoteHost.endsWith("/wd/hub")) {
             remoteHost = remoteHost.substring(0, remoteHost.length() - "/wd/hub".length());
         }
+
         return remoteHost + "/video/" + sessionId() + ".mp4";
     }
 }
