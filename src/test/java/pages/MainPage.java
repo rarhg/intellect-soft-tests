@@ -8,14 +8,11 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    // Локаторы
     private final SelenideElement logo = $(".navbar-brand.z-1.is-logo");
     private final SelenideElement aboutLink = $("a[href='about/']");
     private final SelenideElement contactsLink = $("a[href='contacts/']");
     private final SelenideElement productsMenu = $("a[title='Продукты']");
     private final SelenideElement footer = $("footer");
-
-    // Ссылки на проекты (из выпадающего меню)
     private final SelenideElement platformProLink = $("a[href='products/platformpro/']");
     private final SelenideElement gtnExamLink = $("a[href='products/gtnexam/']");
     private final SelenideElement korobkaOnlineLink = $("a[href='products/korobka.online/']");

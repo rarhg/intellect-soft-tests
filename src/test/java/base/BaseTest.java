@@ -35,7 +35,6 @@ public class BaseTest {
         if (!selenoidUrl.isEmpty()) {
             Configuration.remote = selenoidUrl;
 
-            // Включаем видео в Selenoid
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.of(
                     "enableVNC", true,
