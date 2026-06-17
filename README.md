@@ -46,11 +46,7 @@
 
 ### Удалённый запуск (в Selenoid)
 ```bash
-./gradlew clean test \
-  -Dbrowser=chrome \
-  -DbrowserVersion=128.0 \
-  -DscreenResolution=1920x1080 \
-  -DselenoidUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub
+./gradlew clean test -DisRemote=true -DremoteUrl="https://user1:1234@selenoid.autotests.cloud/wd/hub"
 ```
 
 ### Параметры запуска
